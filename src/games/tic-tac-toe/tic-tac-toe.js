@@ -88,13 +88,12 @@ const Container = styled.div`
     .new_game{
         height: 30px;
         font-size: 25px;
+        text-shadow: 1px 1px 1px black;
         border-radius: 30px;
-        background-color: black;
+        background-color: #ADACAC;
 
     }
 `
-
-
 
 function TicTacToe(){
 
@@ -143,7 +142,7 @@ function TicTacToe(){
             {gameinProgress?
                 <> <div className="head">
                         <h5>Turn: {playerTurn}</h5>
-                        <button className="new_game"> New Game</button>
+                        <button onClick={()=> {setAvailableSquares(squares); setPlayedSquares([]); setPlayerOneSquares([]); setPlayerTwoSquares([])}} className="new_game"> New Game</button>
                     </div> 
                         <div className='section'>
                             <div className="grid" >
